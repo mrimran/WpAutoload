@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Wp Autoload with Namespaces
-Plugin URI: http://URI_Of_Page_Describing_Plugin_and_Updates
+Plugin URI: https://github.com/mrimran/WpAutoload
 Description: Plugin to making loading PHP files easier via autoload instead of using include or require. It also supports to create instances of classes using fully-classified names of the class.
 Version: 1.0.0
 Author: Imran Zahoor
