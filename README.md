@@ -19,10 +19,10 @@ your code via `Namespaces`.
 
 Code to include classes and functions
 ```
-wpal_include(PluginNamespace\SubNamespace\ClassName);
+wpal_load(PluginNamespace\SubNamespace\ClassName);
 
 //or in case calling from the code which comes in same namespace use the below code
-wpal_include(ClassName::class);
+wpal_load(ClassName::class);
 
 //now after using the above code the class or fuction is now included and can be called or used
 $classObj = new ClassName($param1, $param2);
