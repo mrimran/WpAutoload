@@ -7,13 +7,15 @@ to append some paths and then have to mention the file name with the exact path.
 
 This plugin needs you freedom of writing your code and organizing it based on your needed directory structure. 
 
+## Guidlines
 The only guidelines you need to follow are below:
  - Namespace your classes and functions which you are separating so anything placed in 
  `wp-content/plugins/TestPlugin/inc` should be namespaced as `TestPlugin\inc`. 
  Whereas anything placed in `wp-content/plugins/TestPlugin/Inc` would be namespaced as `TestPlugin\Inc`.
  - Filename should be same as of class name, but case doesn't matter because if Class name is 
  `Test` and the file name is `test.php`, the autoloader would still be able to load the correct file.
- 
+
+## Usage
 Now it's time to see how it'll help you to maintain your code if you are following the above guidelines to maintain 
 your code via `Namespaces`.
 
@@ -54,3 +56,6 @@ wpal_new_instance(ClassName::class);
 
 //So now you don't need to write $classObj = new ClassName(), you can just use those methods to create it.
 ```
+## Installation
+- Download the plugin and rename it to `wp-autoload` or `WpAutoload` then place it in `wp-content/plugins/` folder.
+- Login in to your admin and enable the plugin to use it.
