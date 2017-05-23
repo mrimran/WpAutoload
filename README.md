@@ -19,6 +19,11 @@ The only guidelines you need to follow are below:
 Now it's time to see how it'll help you to maintain your code if you are following the above guidelines to maintain 
 your code via `Namespaces`.
 
+In your main plugin file add below line:
+```
+include_once(WP_PLUGIN_DIR . "/wp-autoload/wp-autoload.php" );
+```
+
 Code to include classes and functions
 ```
 wpal_load(PluginNamespace\SubNamespace\ClassName);
