@@ -1,5 +1,5 @@
 {
-  "name": "imran/wp-autoload",
+  "name": "imranz/wp-autoload",
   "description": " Wp Autoload with Namespaces (For better and clean plugin code using OOP)",
   "keywords": ["wordpress", "plugin", "wp-autoload"],
   "homepage": "https://github.com/mrimran/WpAutoload",
