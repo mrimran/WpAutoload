@@ -1,0 +1,19 @@
+{
+  "name": "imran/wp-autoload",
+  "description": " Wp Autoload with Namespaces (For better and clean plugin code using OOP)",
+  "keywords": ["wordpress", "plugin", "wp-autoload"],
+  "homepage": "https://github.com/mrimran/WpAutoload",
+  "license": "GPL3",
+  "authors": [
+    {
+      "name": "Imran Zahoor",
+      "email": "mrimranzahoor@gmail.com",
+      "homepage": "https://imranzahoor.wordpress.com/"
+    }
+  ],
+  "type": "wordpress-plugin",
+  "require": {
+    "php": ">=5.3.2",
+    "composer/installers": "v1.0.20"
+  }
+}
