@@ -17,7 +17,7 @@ $wpalClassInstances = [];
  *
  * @package WpAutoload
  */
-
+spl_autoload_register( 'wpal_load' );
 
 /**
  * Dynamically loads the class attempting to be instantiated elsewhere in the
