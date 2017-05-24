@@ -21,7 +21,7 @@ your code via `Namespaces`.
 
 In your main plugin file add below line:
 ```
-include_once(WP_PLUGIN_DIR . "/wp-autoload/wp-autoload.php" );
+include_once(WP_PLUGIN_DIR . "/wpal-autoload/wpal-autoload.php" );
 ```
 
 Code to include classes and functions
