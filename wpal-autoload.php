@@ -119,7 +119,7 @@ function wpal_create_instance( $className, $args=[] ) {
     global $wpalClassInstances;
     wpal_load( $className );
 
-    if(!$wpalClassInstances[$className]) {
+    if(isset($wpalClassInstances[$className]) && !empty($wpalClassInstances[$className])) {
         return new $className(...$args);
     } else {
         return $wpalClassInstances[$className];
