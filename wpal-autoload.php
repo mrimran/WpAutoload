@@ -89,7 +89,7 @@ function wpal_create_single_instance( $className, $args=[] ) {
     wpal_load( $className );
 
     if(!$wpalClassInstances[$className]) {
-        return $wpalClassInstances[$className] = new $className(...$args);
+        return $wpalClassInstances[$className] = new new_instance_on_ver($className, $args);
     } else {
         return $wpalClassInstances[$className];
     }
@@ -105,7 +105,7 @@ function wpal_create_new_instance( $className, $args=[] ) {
     global $wpalClassInstances;
     wpal_load( $className );
 
-    return $wpalClassInstances[$className] = new $className(...$args);
+    return new_instance_on_ver($className, $args);
 }
 
 /**
@@ -120,8 +120,19 @@ function wpal_create_instance( $className, $args=[] ) {
     wpal_load( $className );
 
     if(!isset($wpalClassInstances[$className]) || empty($wpalClassInstances[$className])) {
-        return new $className(...$args);
+        return new_instance_on_ver($className, $args);
     } else {
         return $wpalClassInstances[$className];
     }
+}
+
+
+function new_instance_on_ver($className, $args=[]) {
+    if(version_compare(phpversion(), '5.6.0', '>=')){
+        $instance = new $className(...$args);
+    } else {
+        $reflect  = new ReflectionClass($className);
+        $instance = $reflect->newInstanceArgs($args);
+    }
+    return $instance;
 }
