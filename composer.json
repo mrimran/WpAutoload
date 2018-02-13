@@ -1,7 +1,7 @@
 {
-  "name": "imranz/wp-autoload",
+  "name": "wpackagist-plugin/wpal-autoload",
   "description": " Wp Autoload with Namespaces (For better and clean plugin code using OOP)",
-  "keywords": ["wordpress", "plugin", "wp-autoload"],
+  "keywords": ["wordpress", "plugin", "wpal-autoload"],
   "homepage": "https://github.com/mrimran/WpAutoload",
   "license": "GPL3",
   "authors": [
