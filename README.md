@@ -62,5 +62,5 @@ wpal_new_instance(ClassName::class);
 //So now you don't need to write $classObj = new ClassName(), you can just use those methods to create it.
 ```
 ## Installation
-- Download the plugin and rename it to `wp-autoload` or `WpAutoload` then place it in `wp-content/plugins/` folder.
+- Download the plugin and rename it to `wpal-autoload` or `WpalAutoload` then place it in `wp-content/plugins/` folder.
 - Login in to your admin and enable the plugin to use it.
