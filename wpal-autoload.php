@@ -32,7 +32,6 @@ spl_autoload_register( 'wpal_load' );
  * @param string $className The fully-qualified name of the class to load.
  */
 function wpal_load($className ) {
-
     if ( false === strpos( $className, '\\' ) ) {//ensure namespace is requested
         return;
     }
@@ -71,9 +70,20 @@ function wpal_load($className ) {
     } elseif( file_exists($filepathLower) ) {
         include_once( $filepathLower );
     } else {
-        wp_die(
+	    global $root_dir;
+	    $vendorPath = $root_dir.'/vendor'.$namespace.'/';
+    	//check if this may exist in root vendor folder
+	    if(file_exists($vendorPath.$fileName)) {
+		    include_once($vendorPath.$fileName);
+	    } elseif(file_exists($vendorPath.$filepathLower)) {
+		    include_once($vendorPath.$filepathLower);
+	    } else {
+	    	//in any case if the path not found just do nothing to pass on this to next autoloader
+		    return;
+	    }
+        /*wp_die(
             esc_html( "The file attempting to be loaded at $filepath does not exist." )
-        );
+        );*/
     }
 }
 
